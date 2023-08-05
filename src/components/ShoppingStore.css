@@ -86,3 +86,12 @@ body {
     border-bottom: none;
   }
   
+  .cart-item img {
+    max-width: 100px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
