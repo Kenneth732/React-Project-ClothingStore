@@ -1,0 +1,28 @@
+/* Reset some default styles for better consistency */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Global styles for headings and buttons */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  /* Container for the shopping store */
+  .shopping-store {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Styles for the product list */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
