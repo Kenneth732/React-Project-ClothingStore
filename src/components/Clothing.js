@@ -43,6 +43,57 @@ function ShoppingStore() {
 
   return (
     <div className="shopping-store">
+        <nav className="navbar">
+  <i className="material-icons menu-icon">
+    menu
+  </i>
+  <div className="logo">
+    <img src="https://github.com/subeshb1/GrabCheap/blob/master/img/logo_inverse.jpg?raw=true" alt="logo" />
+    <div className="text">    GrabCheap
+    </div>
+  </div>
+  <div className="item search right" tabindex="0">
+    <div className="search-group">
+      <select>
+        <option value="all">All</option>
+        <option value="all">Mens</option>
+        <option value="all">Womens</option>
+        <option value="all">Winter</option>
+        <option value="all">Summer</option>
+      </select>
+    <input type="text" />
+    <i className="material-icons search-icon">
+      search
+    </i>
+      </div>
+  </div>
+  
+  
+  <a href="" className="  item">
+
+    <div className="group">
+      <i className="material-icons" >
+        account_circle
+      </i>
+      <div className="detail">
+        Account
+        <div className="sub">Sign In</div>
+      </div>
+    </div>
+  </a>
+
+  <a href="" className="item">
+    <div className="group">
+      <i className="material-icons">
+        shopping_cart
+      </i>  
+      <div className="detail">
+        Cart 
+        <div className="sub">Rs 0.0</div>
+      </div>
+    </div>
+  </a>
+</nav>
       <header>
         <h1>Shopping Store</h1>
         <button className="cart-button" onClick={toggleCart}>
