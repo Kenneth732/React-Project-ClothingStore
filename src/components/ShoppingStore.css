@@ -115,3 +115,16 @@ body {
     align-items: center;
   }
   
+  .cart-item-actions button {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    margin-right: 5px;
+  }
+  
+  .cart-item-actions button:hover {
+    background-color: #c82333;
+  }
+  
