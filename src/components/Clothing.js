@@ -58,7 +58,34 @@ function ShoppingStore() {
           </div>
         ))}
       </div>
-   
+      {isCartOpen && (
+        <div className="cart">
+          <button className="close-button" onClick={toggleCart}>
+            Close Cart
+          </button>
+          <h2>Cart</h2>
+          {cart.length === 0 ? (
+            <p>Your cart is empty</p>
+          ) : (
+            <div>
+              {cart.map((item) => (
+                <div key={item.id} className="cart-item">
+                  <h3>{item.name}</h3>
+                  <p>Price: ${item.price}</p>
+                  <p>Quantity: {item.quantity || 1}</p>
+                  <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                  <button onClick={() => increaseQuantity(item.id)}>+</button>
+                  <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                </div>
+              ))}
+              <div className="cart-total">
+                Total: ${cart.reduce((total, item) => total + item.price * (item.quantity || 1), 0)}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+      {isCartOpen && <div className="cart-backdrop" onClick={toggleCart}></div>}
     </div>
   );
 }
