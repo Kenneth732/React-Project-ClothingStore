@@ -11,3 +11,12 @@ function ShoppingStore() {
           .then((res) => res.json())
           .then((data) => setProducts(data));
       }, []);
+
+      const addToCart = (product) => {
+        setCart([...cart, { ...product, quantity: 1 }]);
+      };
+    
+      const removeFromCart = (productId) => {
+        const updatedCart = cart.filter((item) => item.id !== productId);
+        setCart(updatedCart);
+      };
