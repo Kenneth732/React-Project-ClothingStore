@@ -36,3 +36,7 @@ function ShoppingStore() {
         );
         setCart(updatedCart);
       };
+    
+      const toggleCart = () => {
+        setIsCartOpen(!isCartOpen);
+      };
