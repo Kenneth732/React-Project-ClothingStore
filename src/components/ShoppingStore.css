@@ -128,3 +128,25 @@ body {
     background-color: #c82333;
   }
   
+  .cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .product-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+    }
+  
+    .cart-item img {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
