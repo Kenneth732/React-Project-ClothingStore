@@ -20,3 +20,19 @@ function ShoppingStore() {
         const updatedCart = cart.filter((item) => item.id !== productId);
         setCart(updatedCart);
       };
+
+      const increaseQuantity = (productId) => {
+        const updatedCart = cart.map((item) =>
+          item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+        );
+        setCart(updatedCart);
+      };
+    
+      const decreaseQuantity = (productId) => {
+        const updatedCart = cart.map((item) =>
+          item.id === productId && item.quantity > 1
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        );
+        setCart(updatedCart);
+      };
