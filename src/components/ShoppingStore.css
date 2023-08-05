@@ -106,3 +106,12 @@ body {
     color: #888;
   }
   
+  .cart-item-quantity {
+    font-size: 14px;
+  }
+  
+  .cart-item-actions {
+    display: flex;
+    align-items: center;
+  }
+  
