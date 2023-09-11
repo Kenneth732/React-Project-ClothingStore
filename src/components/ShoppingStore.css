@@ -2,17 +2,100 @@
 /* shopping */
 .shopping-store {
     font-family: Arial, sans-serif;
-    padding: 20px;
+  }
+
+  .container{
+    /* padding: 10px; */
+    width: 100%;
+    background-color: #333;
+    position: relative;
   }
   
   header {
+    /* padding: 10px 6%; */
+    width: 90%;
+    background-color: #333;
+    margin-bottom: 50px;
+    height: 100vh;
+  }
+
+  nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 12px 5%;
+    position: sticky;
   }
   
-  h1 {
+.Logo{
+  width: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    transition: .5s ease;
+  }
+
+  nav ul li a::after {
+    content: '';
+    background: #009688;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+    position: absolute;
+    transition: .5s ease;
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+.content{
+  margin-top: 40px;
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 0 20px;
+  color: rgba(218, 165, 32, 0.822);
+}
+
+.content h1{
+  font-size: 6vw;
+  font-weight: 700;
+  margin-top: 14%!important;
+}
+
+.content p{
+  line-height: 2;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.content .btn{
+  background: rgba(218, 165, 32, 0.822);
+}
+
+
+.containers{
+  padding: 0 7%;
+}
+
+.sub-title{
+  margin: 50px 0 20px;
+  font-size: 2.3vw;
+  font-weight: 500;
+  color: #333;
+}
+h1 {
     margin: 0;
   }
   
@@ -34,6 +117,7 @@
   
   .product-list {
     display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }

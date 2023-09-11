@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ShoppingStore.css';
+import Logo from './assets/Logo.png'
 
 function ShoppingStore() {
     const [products, setProducts] = useState([]);
@@ -7,6 +8,7 @@ function ShoppingStore() {
     const [isCartOpen, setIsCartOpen] = useState(false);
 
     useEffect(() => {
+        // fetch('https://fakestoreapi.com/products')
         fetch('http://localhost:3000/clothingData')
             .then((res) => res.json())
             .then((data) => setProducts(data));
@@ -43,12 +45,43 @@ function ShoppingStore() {
 
     return (
         <div className="shopping-store">
+            <div className='container'>
             <header>
-                <h1>Shopping Store</h1>
-                <button className="cart-button" onClick={toggleCart}>
-                    Cart ({cart.reduce((totalItems, item) => totalItems + (item.quantity || 1), 0)})
-                </button>
+                <nav>
+                    <img src={Logo} className='Logo'/>
+                    <ul>
+                        <li>
+                            <a href=''>Home</a>
+                        </li>
+                        <li>
+                            <a href=''>About</a>
+                        </li>
+                        <li>
+                            <a href=''>Products</a>
+                        </li>
+                        <li>
+                            <a href=''>Testimonial</a>
+                        </li>
+                    </ul>
+                    <button className="cart-button" onClick={toggleCart}>
+                        Cart ({cart.reduce((totalItems, item) => totalItems + (item.quantity || 1), 0)})
+                    </button>
+                </nav>
+
+                <div className='content'>
+                    <h1>Shine a Light</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br /> been the industry's standard dummy text ever since the 1500s,</p>
+
+                    <div className='buttons'>
+                        <button className='btn'>Get Started</button>
+                    </div>
+                </div>
             </header>
+            </div>
+            <div className='containers'>
+                <h1 className='sub-title'>Products We Offer</h1>
+            </div>
+            <div className='containers'>
             <div className="product-list">
                 {products.map((product) => (
                     <div key={product.id} className="product">
@@ -58,6 +91,7 @@ function ShoppingStore() {
                         <button onClick={() => addToCart(product)}>Add to Cart</button>
                     </div>
                 ))}
+            </div>
             </div>
             {isCartOpen && (
                 <div className="cart">
