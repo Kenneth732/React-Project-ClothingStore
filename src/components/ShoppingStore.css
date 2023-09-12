@@ -2,53 +2,51 @@
 /* shopping */
 .shopping-store {
     font-family: Arial, sans-serif;
+    position: relative;
   }
 
   .container{
     /* padding: 10px; */
+    max-width: 100%;
     width: 100%;
-    background-color: #333;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(18, 18, 42);
+    /* height: ; */
     position: relative;
   }
   
   header {
     /* padding: 10px 6%; */
-    width: 90%;
-    background-color: #333;
-    margin-bottom: 50px;
+    width: 100%;
+    background-color: rgb(18, 18, 42);
+    /* margin-bottom: 50px; */
     height: 100vh;
   }
 
-  nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 5%;
-    position: sticky;
-  }
-  
+
 .Logo{
   width: 60px;
   cursor: pointer;
   border-radius: 50%;
 }
-  nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 30px;
-  }
 
+.span{
+  color: rgba(218, 165, 32, 0.822);
+  font-size: 20px;
+}
+nav{
+  width: 90%;
+  /* position: absolute; */
+}
   nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
     position: relative;
     transition: .5s ease;
   }
 
   nav ul li a::after {
     content: '';
-    background: #009688;
+    background: rgba(218, 165, 32, 0.822);
     width: 0;
     height: 3px;
     left: 0;
@@ -60,18 +58,25 @@ nav ul li a:hover::after{
   width: 100%;
 }
 
-.content{
-  margin-top: 40px;
-  width: 100%;
-  margin-bottom: 100px;
+header{
+  /* border: 3px solid red; */
   padding: 0 20px;
+  top: 0;
+}
+
+
+.content{
+  margin-top: 12%;
+  padding: 0 5%;
+  margin-bottom: 12%;
+  width: 100%;
   color: rgba(218, 165, 32, 0.822);
 }
 
 .content h1{
   font-size: 6vw;
   font-weight: 700;
-  margin-top: 14%!important;
+  margin-top: 14px;
 }
 
 .content p{
@@ -100,7 +105,7 @@ h1 {
   }
   
   .cart-button {
-    background-color: #009688;
+    background-color: transparent;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -108,7 +113,7 @@ h1 {
   }
 
   button{
-        background-color: #009688;
+        background-color: rgba(218, 165, 32, 0.822);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -118,8 +123,8 @@ h1 {
   .product-list {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    /* grid-template-columns: repeat(3, 1fr);
+    gap: 20px; */
   }
   
   .product {
@@ -143,6 +148,7 @@ h1 {
     width: 400px;
     height: 100%;
     background-color: #fff;
+    /* background: transparent; */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: right 0.3s ease;
@@ -221,10 +227,41 @@ h1 {
   }
   
   .cart-item button {
-    background-color: #f44336;
+    /* background-color: #f44336; */
     color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
   }
   
+
+  @media screen and (max-width: 767px){
+    .cart-button{
+      right: 3%;
+      top: 20%;
+      position: absolute;
+    }
+    .content p{
+      font-size: 13px;
+    }
+  }
+
+
+  @media screen and (max-width: 580px){
+    .cart-button{
+      right: 3%;
+      top: 20%;
+      position: absolute;
+    }
+    .content{
+      text-align: center;
+    }
+    .content h1{
+      text-align: center;
+      width: 100%;
+      font-size: 40px!important;
+    }
+    .content p{
+      font-size: 18px;
+    }
+  }

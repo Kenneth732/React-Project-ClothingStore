@@ -6,7 +6,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.px{
+  padding: 0 7%;
+}
 
+.cart-container {
+  position: relative;
+  display: inline-block; /* To ensure the icon and count appear inline */
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -10px; /* Adjust this value to control the vertical placement */
+  right: -10px; /* Adjust this value to control the horizontal placement */
+  background-color: red; /* Optional background color for the count */
+  color: white; /* Optional text color for the count */
+  border-radius: 50%; /* Optional rounded shape for the count */
+  padding: 4px 8px; /* Optional padding for the count */
+}
+.fa-opencart{
+  font-size: 40px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
